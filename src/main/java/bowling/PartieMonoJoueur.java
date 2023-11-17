@@ -48,7 +48,11 @@ public class PartieMonoJoueur {
 	 * @return vrai si la partie est terminée pour ce joueur, faux sinon
 	 */
 	public boolean estTerminee() {
-		throw new UnsupportedOperationException("Pas encore implémenté");
+		boolean res = false;
+		if (lesTours.size()==20){
+			res=true;
+		}
+		return res;
 	}
 
 
@@ -56,7 +60,13 @@ public class PartieMonoJoueur {
 	 * @return Le numéro du tour courant [1..10], ou 0 si le jeu est fini
 	 */
 	public int numeroTourCourant() {
-		throw new UnsupportedOperationException("Pas encore implémenté");
+		int numTour;
+		if (lesTours.size()==20){
+			numTour=0;
+		}else{
+			numTour=5;
+		}
+		return numTour;
 	}
 
 	/**
@@ -64,6 +74,7 @@ public class PartieMonoJoueur {
 	 *         est fini
 	 */
 	public int numeroProchainLancer() {
+		
 		throw new UnsupportedOperationException("Pas encore implémenté");
 	}
 

@@ -3,15 +3,15 @@ import java.util.ArrayList;
 
 public class Tours {
 	private ArrayList<Lancer> lesLancers;
+	private int nbTours;
 
-	private int num;
-
-	public Tours(int num,ArrayList lesLancers){
-		this.num=num;
+	public Tours(int nbTours,ArrayList lesLancers){
+		this.nbTours=nbTours;
 		this.lesLancers=lesLancers;
 	}
-	public Tours(int num){
-		this.num=num;
+	public Tours(int nbTours){
+		
+		this.nbTours=nbTours;
 	}
 	
 	public int scoreTour (){
@@ -35,17 +35,18 @@ public class Tours {
 		return res;
 	}
 	public ArrayList<Lancer> getLancer() {
+		
 		return lesLancers;
 	}
 	public double bonus(){
 		double ret=0;
-		Tours tourprecedent=new Tours(num-1);
+		Tours tourprecedent=new Tours(nbTours-2);
 		//fais un spare
-		if(estUnSpare()==true) {
+		if(tourprecedent.estUnSpare()==true) {
 			ret=lesLancers.get(0).getnbQuillesTombees();
 		}
 		//fais un strike
-		if(estUnStrike()==true){
+		if(tourprecedent.estUnStrike()==true){
 			ret=lesLancers.get(0).getnbQuillesTombees()+lesLancers.get(1).getnbQuillesTombees();
 		}
 		return ret;
