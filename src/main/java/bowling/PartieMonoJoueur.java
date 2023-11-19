@@ -67,6 +67,8 @@ public class PartieMonoJoueur {
 				}
 			}
 		}
+		
+		
 
 		Tour dernierTour = laPartie.get(nbTours - 1);
 		scoreTotal += dernierTour.getScore();

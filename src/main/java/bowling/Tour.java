@@ -69,3 +69,4 @@ public class Tour {
 		return !estFini;
 	}
 }
+
