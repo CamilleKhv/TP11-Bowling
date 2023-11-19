@@ -1,15 +1,13 @@
 package bowling;
 
 public class Lancer {
-	private int nbQuillesTombees;
+	private int nombreDeQuillesAbattues;
 
-	public Lancer(int nbQuillesTombees) {
-		this.nbQuillesTombees = nbQuillesTombees;
+	public Lancer(int nombreDeQuillesAbattues) {
+		this.nombreDeQuillesAbattues = nombreDeQuillesAbattues;
 	}
 
-	public int getnbQuillesTombees() {
-		return nbQuillesTombees;
+	public int getNombreDeQuillesAbattues() {
+		return nombreDeQuillesAbattues;
 	}
-
-
 }
